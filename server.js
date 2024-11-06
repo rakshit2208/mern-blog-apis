@@ -10,6 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+app.get('/', (req, res) => {
+  res.send('products api running new deploy');
+});
+
 const rootPath = path.join(__dirname, '..');
   const client = path.join(rootPath, 'client');
   // const publicDir = path.join(rootPath, 'public');
